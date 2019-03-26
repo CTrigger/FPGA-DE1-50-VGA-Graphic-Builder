@@ -1,0 +1,6 @@
+ENTITY Projeto_Base is
+	PORT
+	(
+
+	);
+END Projeto_Base;

@@ -1,0 +1,1804 @@
+TimeQuest Timing Analyzer report for Projeto_Base
+Thu Jun 01 21:23:29 2017
+Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLOCK_27[0]'
+ 12. Slow Model Setup: 'VGA_HS~reg0'
+ 13. Slow Model Hold: 'CLOCK_27[0]'
+ 14. Slow Model Hold: 'VGA_HS~reg0'
+ 15. Slow Model Minimum Pulse Width: 'CLOCK_27[0]'
+ 16. Slow Model Minimum Pulse Width: 'VGA_HS~reg0'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'CLOCK_27[0]'
+ 27. Fast Model Setup: 'VGA_HS~reg0'
+ 28. Fast Model Hold: 'CLOCK_27[0]'
+ 29. Fast Model Hold: 'VGA_HS~reg0'
+ 30. Fast Model Minimum Pulse Width: 'CLOCK_27[0]'
+ 31. Fast Model Minimum Pulse Width: 'VGA_HS~reg0'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; Projeto_Base                                       ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C20F484C7                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                   ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; Clock Name  ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets         ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; CLOCK_27[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_27[0] } ;
+; VGA_HS~reg0 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { VGA_HS~reg0 } ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+
+
++---------------------------------------------------+
+; Slow Model Fmax Summary                           ;
++------------+-----------------+-------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name  ; Note ;
++------------+-----------------+-------------+------+
+; 85.11 MHz  ; 85.11 MHz       ; CLOCK_27[0] ;      ;
+; 384.32 MHz ; 384.32 MHz      ; VGA_HS~reg0 ;      ;
++------------+-----------------+-------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------+
+; Slow Model Setup Summary              ;
++-------------+---------+---------------+
+; Clock       ; Slack   ; End Point TNS ;
++-------------+---------+---------------+
+; CLOCK_27[0] ; -10.750 ; -621.761      ;
+; VGA_HS~reg0 ; -1.602  ; -18.806       ;
++-------------+---------+---------------+
+
+
++-------------------------------------+
+; Slow Model Hold Summary             ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; CLOCK_27[0] ; 0.445 ; 0.000         ;
+; VGA_HS~reg0 ; 0.975 ; 0.000         ;
++-------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------------+--------+-----------------+
+; Clock       ; Slack  ; End Point TNS   ;
++-------------+--------+-----------------+
+; CLOCK_27[0] ; -1.631 ; -132.385        ;
+; VGA_HS~reg0 ; -0.611 ; -14.664         ;
++-------------+--------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_27[0]'                                                                           ;
++---------+-----------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------+---------------+--------------+-------------+--------------+------------+------------+
+; -10.750 ; drawHS[0] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 11.789     ;
+; -10.740 ; drawHS[1] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 11.778     ;
+; -10.683 ; drawHS[6] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.008     ; 11.713     ;
+; -10.596 ; drawHS[5] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.001     ; 11.633     ;
+; -10.505 ; drawHS[3] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 11.545     ;
+; -10.502 ; drawHS[3] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.003     ; 11.537     ;
+; -10.497 ; drawHS[5] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.004     ; 11.531     ;
+; -10.495 ; drawHS[2] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.003     ; 11.530     ;
+; -10.478 ; drawHS[1] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 11.518     ;
+; -10.466 ; drawHS[4] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.007     ; 11.497     ;
+; -10.457 ; drawHS[4] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 11.495     ;
+; -10.442 ; drawHS[3] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.007     ; 11.473     ;
+; -10.439 ; drawHS[2] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 11.471     ;
+; -10.424 ; drawHS[3] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 11.456     ;
+; -10.417 ; drawHS[2] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.015     ; 11.440     ;
+; -10.411 ; drawHS[1] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 11.443     ;
+; -10.400 ; drawHS[5] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 11.439     ;
+; -10.385 ; drawHS[3] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 11.418     ;
+; -10.381 ; drawHS[2] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.007     ; 11.412     ;
+; -10.378 ; drawHS[0] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.002     ; 11.414     ;
+; -10.378 ; drawHS[3] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 11.416     ;
+; -10.374 ; drawHS[2] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.016     ; 11.396     ;
+; -10.373 ; drawHS[2] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.003     ; 11.408     ;
+; -10.372 ; drawVS[0] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.005      ; 11.415     ;
+; -10.364 ; drawHS[1] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.007     ; 11.395     ;
+; -10.355 ; drawHS[3] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.003     ; 11.390     ;
+; -10.342 ; drawHS[5] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.008     ; 11.372     ;
+; -10.336 ; drawHS[3] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.015     ; 11.359     ;
+; -10.335 ; drawHS[3] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.016     ; 11.357     ;
+; -10.318 ; drawHS[1] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 11.351     ;
+; -10.315 ; drawHS[0] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 11.348     ;
+; -10.310 ; drawHS[2] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 11.348     ;
+; -10.303 ; drawHS[1] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.003     ; 11.338     ;
+; -10.298 ; drawHS[0] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.014     ; 11.322     ;
+; -10.288 ; drawHS[2] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 11.328     ;
+; -10.282 ; drawVS[0] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 11.322     ;
+; -10.276 ; drawHS[2] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 11.309     ;
+; -10.275 ; drawHS[1] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.003     ; 11.310     ;
+; -10.273 ; drawHS[3] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 11.312     ;
+; -10.273 ; drawHS[7] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 11.313     ;
+; -10.272 ; drawHS[4] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 11.311     ;
+; -10.267 ; drawHS[4] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.011     ; 11.294     ;
+; -10.265 ; drawHS[2] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.011     ; 11.292     ;
+; -10.253 ; drawHS[1] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.016     ; 11.275     ;
+; -10.252 ; drawHS[0] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.003      ; 11.293     ;
+; -10.251 ; drawHS[0] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 11.283     ;
+; -10.234 ; drawHS[2] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 11.273     ;
+; -10.214 ; drawHS[3] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.011     ; 11.241     ;
+; -10.204 ; drawHS[0] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.010     ; 11.232     ;
+; -10.196 ; drawHS[1] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.011     ; 11.223     ;
+; -10.181 ; drawHS[0] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.004     ; 11.215     ;
+; -10.181 ; drawHS[0] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.002     ; 11.217     ;
+; -10.179 ; drawHS[0] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 11.219     ;
+; -10.176 ; drawHS[6] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 11.208     ;
+; -10.170 ; drawHS[4] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 11.202     ;
+; -10.166 ; drawHS[4] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.003     ; 11.201     ;
+; -10.165 ; drawHS[0] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.015     ; 11.188     ;
+; -10.151 ; drawHS[1] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.015     ; 11.174     ;
+; -10.145 ; drawHS[5] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 11.177     ;
+; -10.145 ; drawHS[1] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 11.184     ;
+; -10.138 ; drawHS[6] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 11.177     ;
+; -10.136 ; drawHS[4] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.003     ; 11.171     ;
+; -10.118 ; drawVS[0] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.007      ; 11.163     ;
+; -10.107 ; drawHS[2] ; VGA_R[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.020     ; 11.125     ;
+; -10.094 ; drawHS[5] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.004     ; 11.128     ;
+; -10.086 ; drawHS[5] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.007     ; 11.117     ;
+; -10.086 ; drawHS[4] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.016     ; 11.108     ;
+; -10.080 ; drawHS[4] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 11.113     ;
+; -10.056 ; drawHS[4] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 11.096     ;
+; -10.053 ; drawVS[0] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 11.091     ;
+; -10.033 ; drawHS[5] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 11.071     ;
+; -10.014 ; drawHS[6] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.012     ; 11.040     ;
+; -10.010 ; drawHS[6] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.017     ; 11.031     ;
+; -10.002 ; drawHS[5] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.012     ; 11.028     ;
+; -9.998  ; drawVS[0] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 11.030     ;
+; -9.994  ; drawHS[6] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.016     ; 11.016     ;
+; -9.994  ; drawHS[6] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.007     ; 11.025     ;
+; -9.981  ; drawHS[5] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.017     ; 11.002     ;
+; -9.978  ; drawHS[7] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.005      ; 11.021     ;
+; -9.973  ; drawHS[4] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.015     ; 10.996     ;
+; -9.971  ; drawVS[0] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.011     ; 10.998     ;
+; -9.960  ; drawVS[1] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 10.998     ;
+; -9.952  ; drawHS[6] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 10.990     ;
+; -9.946  ; drawHS[7] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.006      ; 10.990     ;
+; -9.924  ; drawHS[1] ; VGA_R[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.020     ; 10.942     ;
+; -9.917  ; drawHS[7] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 10.949     ;
+; -9.911  ; drawHS[3] ; VGA_R[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.020     ; 10.929     ;
+; -9.889  ; drawVS[0] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 10.929     ;
+; -9.889  ; drawHS[6] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.001     ; 10.926     ;
+; -9.883  ; drawHS[6] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.004     ; 10.917     ;
+; -9.878  ; drawHS[5] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.016     ; 10.900     ;
+; -9.873  ; drawHS[0] ; VGA_R[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.019     ; 10.892     ;
+; -9.853  ; drawHS[7] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.007      ; 10.898     ;
+; -9.831  ; drawHS[7] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.010     ; 10.859     ;
+; -9.804  ; drawVS[0] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.006      ; 10.848     ;
+; -9.782  ; yInit[0]  ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.015      ; 10.835     ;
+; -9.768  ; drawHS[6] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.004     ; 10.802     ;
+; -9.735  ; drawHS[4] ; VGA_R[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.020     ; 10.753     ;
+; -9.720  ; drawHS[7] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 10.760     ;
+; -9.701  ; drawVS[1] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.005      ; 10.744     ;
++---------+-----------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'VGA_HS~reg0'                                                                         ;
++--------+------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node  ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------+-------------+--------------+-------------+--------------+------------+------------+
+; -1.602 ; countVS[7] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.640      ;
+; -1.602 ; countVS[7] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.640      ;
+; -1.602 ; countVS[7] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.640      ;
+; -1.602 ; countVS[7] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.640      ;
+; -1.602 ; countVS[7] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.640      ;
+; -1.602 ; countVS[7] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.640      ;
+; -1.602 ; countVS[7] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.640      ;
+; -1.602 ; countVS[7] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.640      ;
+; -1.602 ; countVS[7] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.640      ;
+; -1.602 ; countVS[7] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.640      ;
+; -1.557 ; countVS[8] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.595      ;
+; -1.557 ; countVS[8] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.595      ;
+; -1.557 ; countVS[8] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.595      ;
+; -1.557 ; countVS[8] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.595      ;
+; -1.557 ; countVS[8] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.595      ;
+; -1.557 ; countVS[8] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.595      ;
+; -1.557 ; countVS[8] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.595      ;
+; -1.557 ; countVS[8] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.595      ;
+; -1.557 ; countVS[8] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.595      ;
+; -1.557 ; countVS[8] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.595      ;
+; -1.533 ; countVS[1] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.571      ;
+; -1.533 ; countVS[1] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.571      ;
+; -1.533 ; countVS[1] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.571      ;
+; -1.533 ; countVS[1] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.571      ;
+; -1.533 ; countVS[1] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.571      ;
+; -1.533 ; countVS[1] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.571      ;
+; -1.533 ; countVS[1] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.571      ;
+; -1.533 ; countVS[1] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.571      ;
+; -1.533 ; countVS[1] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.571      ;
+; -1.533 ; countVS[1] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.571      ;
+; -1.482 ; countVS[2] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.520      ;
+; -1.482 ; countVS[2] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.520      ;
+; -1.482 ; countVS[2] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.520      ;
+; -1.482 ; countVS[2] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.520      ;
+; -1.482 ; countVS[2] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.520      ;
+; -1.482 ; countVS[2] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.520      ;
+; -1.482 ; countVS[2] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.520      ;
+; -1.482 ; countVS[2] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.520      ;
+; -1.482 ; countVS[2] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.520      ;
+; -1.482 ; countVS[2] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.520      ;
+; -1.472 ; countVS[1] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 2.511      ;
+; -1.459 ; countVS[5] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.497      ;
+; -1.459 ; countVS[5] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.497      ;
+; -1.459 ; countVS[5] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.497      ;
+; -1.459 ; countVS[5] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.497      ;
+; -1.459 ; countVS[5] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.497      ;
+; -1.459 ; countVS[5] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.497      ;
+; -1.459 ; countVS[5] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.497      ;
+; -1.459 ; countVS[5] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.497      ;
+; -1.459 ; countVS[5] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.497      ;
+; -1.459 ; countVS[5] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.497      ;
+; -1.446 ; countVS[0] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.484      ;
+; -1.366 ; countVS[0] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.404      ;
+; -1.361 ; countVS[2] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 2.400      ;
+; -1.314 ; countVS[7] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 2.353      ;
+; -1.303 ; countVS[3] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.341      ;
+; -1.303 ; countVS[3] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.341      ;
+; -1.303 ; countVS[3] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.341      ;
+; -1.303 ; countVS[3] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.341      ;
+; -1.303 ; countVS[3] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.341      ;
+; -1.303 ; countVS[3] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.341      ;
+; -1.303 ; countVS[3] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.341      ;
+; -1.303 ; countVS[3] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.341      ;
+; -1.303 ; countVS[3] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.341      ;
+; -1.303 ; countVS[3] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.341      ;
+; -1.289 ; countVS[6] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.327      ;
+; -1.289 ; countVS[6] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.327      ;
+; -1.289 ; countVS[6] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.327      ;
+; -1.289 ; countVS[6] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.327      ;
+; -1.289 ; countVS[6] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.327      ;
+; -1.289 ; countVS[6] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.327      ;
+; -1.289 ; countVS[6] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.327      ;
+; -1.289 ; countVS[6] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.327      ;
+; -1.289 ; countVS[6] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.327      ;
+; -1.289 ; countVS[6] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.327      ;
+; -1.286 ; countVS[0] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.324      ;
+; -1.269 ; countVS[9] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.307      ;
+; -1.269 ; countVS[9] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.307      ;
+; -1.269 ; countVS[9] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.307      ;
+; -1.269 ; countVS[9] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.307      ;
+; -1.269 ; countVS[9] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.307      ;
+; -1.269 ; countVS[9] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.307      ;
+; -1.269 ; countVS[9] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.307      ;
+; -1.269 ; countVS[9] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.307      ;
+; -1.269 ; countVS[9] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.307      ;
+; -1.269 ; countVS[9] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.307      ;
+; -1.269 ; countVS[8] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 2.308      ;
+; -1.246 ; countVS[4] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 2.285      ;
+; -1.244 ; countVS[3] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 2.283      ;
+; -1.206 ; countVS[0] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.244      ;
+; -1.171 ; countVS[5] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 2.210      ;
+; -1.143 ; countVS[0] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.181      ;
+; -1.143 ; countVS[0] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.181      ;
+; -1.143 ; countVS[0] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.181      ;
+; -1.143 ; countVS[0] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.181      ;
+; -1.143 ; countVS[0] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.181      ;
+; -1.143 ; countVS[0] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.181      ;
+; -1.085 ; countVS[0] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 2.124      ;
+; -1.042 ; countVS[8] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 2.081      ;
+; -1.003 ; countVS[4] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 2.041      ;
++--------+------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_27[0]'                                                                                 ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; 0.445 ; drawHS[7]       ; drawHS[7]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; drawHS[8]       ; drawHS[8]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; drawHS[9]       ; drawHS[9]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; drawVS[5]       ; drawVS[5]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; drawVS[6]       ; drawVS[6]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; drawVS[7]       ; drawVS[7]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; drawVS[8]       ; drawVS[8]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; pacmanFrame[0]  ; pacmanFrame[0] ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; pacmanFrame[1]  ; pacmanFrame[1] ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.731      ;
+; 0.631 ; moveDelay[19]   ; moveDelay[19]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.917      ;
+; 0.631 ; pacmanFrame[0]  ; pacmanFrame[1] ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.917      ;
+; 0.632 ; xInit[9]        ; xInit[9]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.918      ;
+; 0.652 ; countHS[9]      ; countHS[9]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.938      ;
+; 0.745 ; countHS[8]      ; VGA_HS~reg0    ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.031      ;
+; 0.967 ; xEnd[3]         ; xEnd[3]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.253      ;
+; 0.968 ; moveDelay[1]    ; moveDelay[1]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; xEnd[8]         ; xEnd[8]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.254      ;
+; 0.968 ; yEnd[2]         ; yEnd[2]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.254      ;
+; 0.971 ; moveDelay[3]    ; moveDelay[3]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.257      ;
+; 0.972 ; xEnd[6]         ; xEnd[6]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.258      ;
+; 0.974 ; countHS[0]      ; countHS[0]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.260      ;
+; 0.976 ; moveDelay[5]    ; moveDelay[5]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; yEnd[4]         ; yEnd[4]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.262      ;
+; 0.976 ; yEnd[8]         ; yEnd[8]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.262      ;
+; 0.977 ; moveDelay[7]    ; moveDelay[7]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; moveDelay[8]    ; moveDelay[8]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.263      ;
+; 0.977 ; moveDelay[9]    ; moveDelay[9]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.263      ;
+; 0.979 ; moveDelay[11]   ; moveDelay[11]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.265      ;
+; 0.980 ; yEnd[6]         ; yEnd[6]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.266      ;
+; 0.983 ; xInit[0]        ; xInit[0]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.269      ;
+; 0.983 ; yInit[0]        ; yInit[0]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.269      ;
+; 0.984 ; moveDelay[12]   ; moveDelay[12]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.270      ;
+; 0.984 ; moveDelay[17]   ; moveDelay[17]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.270      ;
+; 0.985 ; moveDelay[14]   ; moveDelay[14]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.271      ;
+; 0.986 ; countHS[2]      ; countHS[2]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.272      ;
+; 0.989 ; countHS[1]      ; countHS[1]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.275      ;
+; 0.995 ; countHS[4]      ; countHS[4]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.281      ;
+; 1.002 ; countHS[9]      ; VGA_HS~reg0    ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.288      ;
+; 1.007 ; yEnd[1]         ; yEnd[1]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.293      ;
+; 1.010 ; moveDelay[0]    ; moveDelay[0]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.296      ;
+; 1.011 ; xEnd[7]         ; xEnd[7]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.297      ;
+; 1.011 ; xEnd[9]         ; xEnd[9]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.297      ;
+; 1.014 ; moveDelay[18]   ; moveDelay[18]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.300      ;
+; 1.016 ; xEnd[5]         ; xEnd[5]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.302      ;
+; 1.018 ; moveDelay[2]    ; moveDelay[2]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.304      ;
+; 1.018 ; xEnd[2]         ; xEnd[2]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.304      ;
+; 1.018 ; xEnd[4]         ; xEnd[4]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.304      ;
+; 1.019 ; moveDelay[4]    ; moveDelay[4]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.305      ;
+; 1.019 ; moveDelay[13]   ; moveDelay[13]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.305      ;
+; 1.019 ; moveDelay[16]   ; moveDelay[16]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.305      ;
+; 1.019 ; yEnd[5]         ; yEnd[5]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.305      ;
+; 1.022 ; countHS[8]      ; countHS[8]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.308      ;
+; 1.024 ; moveDelay[6]    ; moveDelay[6]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.310      ;
+; 1.024 ; xInit[5]        ; xInit[5]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.310      ;
+; 1.025 ; xInit[8]        ; xInit[8]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.311      ;
+; 1.026 ; xInit[3]        ; xInit[3]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.312      ;
+; 1.028 ; yInit[6]        ; yInit[6]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.314      ;
+; 1.029 ; xInit[6]        ; xInit[6]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.315      ;
+; 1.030 ; yInit[8]        ; yInit[8]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.316      ;
+; 1.031 ; yInit[1]        ; yInit[1]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.317      ;
+; 1.031 ; yInit[3]        ; yInit[3]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.317      ;
+; 1.032 ; enableHS        ; showDisplay    ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.318      ;
+; 1.033 ; countHS[3]      ; countHS[3]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.319      ;
+; 1.033 ; yInit[4]        ; yInit[4]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.319      ;
+; 1.039 ; countHS[6]      ; countHS[6]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.325      ;
+; 1.042 ; countHS[5]      ; countHS[5]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.328      ;
+; 1.081 ; startController ; LEDG[7]~reg0   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.367      ;
+; 1.081 ; startController ; LEDG[5]~reg0   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.367      ;
+; 1.081 ; startController ; LEDG[3]~reg0   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.367      ;
+; 1.081 ; startController ; LEDG[1]~reg0   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.367      ;
+; 1.192 ; yInit[5]        ; yInit[5]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.478      ;
+; 1.196 ; xInit[7]        ; xInit[7]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.482      ;
+; 1.197 ; yEnd[7]         ; yEnd[7]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.483      ;
+; 1.203 ; yEnd[3]         ; yEnd[3]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.489      ;
+; 1.205 ; countHS[7]      ; countHS[7]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.491      ;
+; 1.211 ; countHS[7]      ; VGA_HS~reg0    ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.497      ;
+; 1.212 ; moveDelay[15]   ; moveDelay[15]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.498      ;
+; 1.233 ; xEnd[1]         ; xEnd[1]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.519      ;
+; 1.241 ; moveDelay[10]   ; moveDelay[10]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.527      ;
+; 1.245 ; xInit[4]        ; xInit[4]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.531      ;
+; 1.262 ; xInit[1]        ; xInit[1]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.548      ;
+; 1.263 ; yInit[2]        ; yInit[2]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.549      ;
+; 1.265 ; yInit[7]        ; yInit[7]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.551      ;
+; 1.272 ; xInit[2]        ; xInit[2]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.558      ;
+; 1.400 ; xEnd[8]         ; xEnd[9]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.686      ;
+; 1.403 ; moveDelay[3]    ; moveDelay[4]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.689      ;
+; 1.404 ; xEnd[3]         ; xEnd[4]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.690      ;
+; 1.406 ; countHS[0]      ; countHS[1]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.692      ;
+; 1.408 ; yEnd[4]         ; yEnd[5]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.694      ;
+; 1.408 ; moveDelay[5]    ; moveDelay[6]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.694      ;
+; 1.409 ; countHS[9]      ; countHS[0]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.695      ;
+; 1.409 ; countHS[9]      ; countHS[1]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.695      ;
+; 1.409 ; countHS[9]      ; countHS[2]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.695      ;
+; 1.409 ; countHS[9]      ; countHS[3]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.695      ;
+; 1.409 ; countHS[9]      ; countHS[4]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.695      ;
+; 1.409 ; countHS[9]      ; countHS[5]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.695      ;
+; 1.409 ; countHS[9]      ; countHS[7]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.695      ;
+; 1.409 ; countHS[9]      ; countHS[8]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.695      ;
+; 1.409 ; countHS[9]      ; countHS[6]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.695      ;
+; 1.409 ; moveDelay[7]    ; moveDelay[8]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 1.695      ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'VGA_HS~reg0'                                                                         ;
++-------+------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+-------------+--------------+-------------+--------------+------------+------------+
+; 0.975 ; countVS[8] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.261      ;
+; 0.983 ; countVS[6] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.269      ;
+; 0.984 ; countVS[2] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.270      ;
+; 0.987 ; countVS[4] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.273      ;
+; 1.031 ; countVS[1] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.317      ;
+; 1.032 ; countVS[3] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.318      ;
+; 1.034 ; countVS[7] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.320      ;
+; 1.034 ; countVS[0] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.320      ;
+; 1.038 ; countVS[5] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.324      ;
+; 1.178 ; countVS[9] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 1.465      ;
+; 1.217 ; countVS[9] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 1.504      ;
+; 1.254 ; countVS[9] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.540      ;
+; 1.265 ; countVS[5] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 1.552      ;
+; 1.366 ; countVS[0] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 1.653      ;
+; 1.407 ; countVS[8] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.693      ;
+; 1.415 ; countVS[6] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.701      ;
+; 1.419 ; countVS[4] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.705      ;
+; 1.464 ; countVS[1] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.750      ;
+; 1.464 ; countVS[0] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.750      ;
+; 1.465 ; countVS[3] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.751      ;
+; 1.467 ; countVS[7] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.753      ;
+; 1.471 ; countVS[5] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.757      ;
+; 1.495 ; countVS[6] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.781      ;
+; 1.499 ; countVS[4] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.785      ;
+; 1.517 ; countVS[2] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.803      ;
+; 1.518 ; countVS[6] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 1.805      ;
+; 1.525 ; countVS[3] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 1.812      ;
+; 1.544 ; countVS[0] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.830      ;
+; 1.545 ; countVS[3] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.831      ;
+; 1.547 ; countVS[7] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.833      ;
+; 1.551 ; countVS[5] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.837      ;
+; 1.575 ; countVS[6] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.861      ;
+; 1.579 ; countVS[4] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.865      ;
+; 1.597 ; countVS[2] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.883      ;
+; 1.600 ; countVS[4] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 1.887      ;
+; 1.625 ; countVS[3] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.911      ;
+; 1.631 ; countVS[5] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.917      ;
+; 1.638 ; countVS[1] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.924      ;
+; 1.642 ; countVS[2] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 1.929      ;
+; 1.659 ; countVS[4] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.945      ;
+; 1.677 ; countVS[2] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.963      ;
+; 1.683 ; countVS[7] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 1.970      ;
+; 1.705 ; countVS[3] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.991      ;
+; 1.711 ; countVS[5] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.997      ;
+; 1.718 ; countVS[1] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.004      ;
+; 1.718 ; countVS[0] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.004      ;
+; 1.739 ; countVS[4] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.025      ;
+; 1.753 ; countVS[6] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 2.040      ;
+; 1.753 ; countVS[1] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 2.040      ;
+; 1.755 ; countVS[4] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.041      ;
+; 1.755 ; countVS[4] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.041      ;
+; 1.755 ; countVS[4] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.041      ;
+; 1.755 ; countVS[4] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.041      ;
+; 1.757 ; countVS[2] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.043      ;
+; 1.785 ; countVS[3] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.071      ;
+; 1.794 ; countVS[8] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 2.081      ;
+; 1.798 ; countVS[1] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.084      ;
+; 1.798 ; countVS[0] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.084      ;
+; 1.837 ; countVS[0] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 2.124      ;
+; 1.837 ; countVS[2] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.123      ;
+; 1.865 ; countVS[3] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.151      ;
+; 1.878 ; countVS[1] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.164      ;
+; 1.878 ; countVS[0] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.164      ;
+; 1.895 ; countVS[0] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.181      ;
+; 1.895 ; countVS[0] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.181      ;
+; 1.895 ; countVS[0] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.181      ;
+; 1.895 ; countVS[0] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.181      ;
+; 1.917 ; countVS[2] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.203      ;
+; 1.923 ; countVS[5] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 2.210      ;
+; 1.958 ; countVS[1] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.244      ;
+; 1.996 ; countVS[3] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 2.283      ;
+; 1.997 ; countVS[2] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.283      ;
+; 1.998 ; countVS[4] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 2.285      ;
+; 2.021 ; countVS[8] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 2.308      ;
+; 2.021 ; countVS[9] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.307      ;
+; 2.021 ; countVS[9] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.307      ;
+; 2.021 ; countVS[9] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.307      ;
+; 2.021 ; countVS[9] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.307      ;
+; 2.021 ; countVS[9] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.307      ;
+; 2.021 ; countVS[9] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.307      ;
+; 2.021 ; countVS[9] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.307      ;
+; 2.021 ; countVS[9] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.307      ;
+; 2.021 ; countVS[9] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.307      ;
+; 2.038 ; countVS[1] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.324      ;
+; 2.041 ; countVS[6] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.327      ;
+; 2.041 ; countVS[6] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.327      ;
+; 2.041 ; countVS[6] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.327      ;
+; 2.041 ; countVS[6] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.327      ;
+; 2.041 ; countVS[6] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.327      ;
+; 2.041 ; countVS[6] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.327      ;
+; 2.055 ; countVS[3] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.341      ;
+; 2.055 ; countVS[3] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.341      ;
+; 2.055 ; countVS[3] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.341      ;
+; 2.066 ; countVS[7] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 2.353      ;
+; 2.113 ; countVS[2] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 2.400      ;
+; 2.118 ; countVS[1] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.404      ;
+; 2.211 ; countVS[5] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.497      ;
+; 2.211 ; countVS[5] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.497      ;
+; 2.211 ; countVS[5] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.497      ;
+; 2.211 ; countVS[5] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 2.497      ;
++-------+------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_27[0]'                                                        ;
++--------+--------------+----------------+------------------+-------------+------------+---------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target        ;
++--------+--------------+----------------+------------------+-------------+------------+---------------+
+; -1.631 ; 1.000        ; 2.631          ; Port Rate        ; CLOCK_27[0] ; Rise       ; CLOCK_27[0]   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; LEDG[1]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; LEDG[1]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; LEDG[3]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; LEDG[3]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; LEDG[5]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; LEDG[5]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; LEDG[7]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; LEDG[7]~reg0  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_B[0]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_B[0]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_B[1]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_B[1]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_B[2]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_B[2]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_B[3]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_B[3]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_G[0]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_G[0]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_G[1]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_G[1]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_G[2]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_G[2]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_G[3]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_G[3]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; VGA_HS~reg0   ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; VGA_HS~reg0   ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_R[0]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_R[0]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_R[1]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_R[1]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_R[2]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_R[2]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_R[3]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_R[3]~reg0 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[0]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[1]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[2]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[3]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[4]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[4]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[5]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[5]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[6]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[6]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[7]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[7]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[8]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[8]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[9]    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[9]    ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[0]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[0]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[4]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[4]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[5]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[5]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[6]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[6]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[7]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[7]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[8]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[8]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[9]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[9]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[0]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[0]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[1]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[2]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[3]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[4]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[4]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[5]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[5]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[6]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[6]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[7]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[7]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[8]     ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[8]     ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; enableHS      ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; enableHS      ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; moveDelay[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; moveDelay[0]  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; moveDelay[10] ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; moveDelay[10] ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; moveDelay[11] ;
++--------+--------------+----------------+------------------+-------------+------------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'VGA_HS~reg0'                                                                      ;
++--------+--------------+----------------+------------------+-------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+-------------+------------+-----------------------------+
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; VGA_VS~reg0                 ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; VGA_VS~reg0                 ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[0]                  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[0]                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[1]                  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[1]                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[2]                  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[2]                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[3]                  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[3]                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[4]                  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[4]                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[5]                  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[5]                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[6]                  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[6]                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[7]                  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[7]                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[8]                  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[8]                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[9]                  ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[9]                  ;
+; -0.611 ; 0.500        ; 1.111          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; enableVS                    ;
+; -0.611 ; 0.500        ; 1.111          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; enableVS                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; VGA_HS~reg0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; VGA_HS~reg0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; VGA_HS~reg0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; VGA_HS~reg0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; VGA_HS~reg0|regout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; VGA_HS~reg0|regout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; VGA_VS~reg0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; VGA_VS~reg0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[5]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[5]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[6]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[6]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[7]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[7]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[8]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[8]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[9]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[9]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; enableVS|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; enableVS|clk                ;
++--------+--------------+----------------+------------------+-------------+------------+-----------------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++-----------+-------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_27[0] ; 11.014 ; 11.014 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[0]   ; CLOCK_27[0] ; 11.014 ; 11.014 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[1]   ; CLOCK_27[0] ; 10.334 ; 10.334 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[2]   ; CLOCK_27[0] ; 10.196 ; 10.196 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[3]   ; CLOCK_27[0] ; 9.317  ; 9.317  ; Fall       ; CLOCK_27[0]     ;
++-----------+-------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++-----------+-------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_27[0] ; -3.255 ; -3.255 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[0]   ; CLOCK_27[0] ; -3.400 ; -3.400 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[1]   ; CLOCK_27[0] ; -3.255 ; -3.255 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[2]   ; CLOCK_27[0] ; -3.405 ; -3.405 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[3]   ; CLOCK_27[0] ; -3.412 ; -3.412 ; Fall       ; CLOCK_27[0]     ;
++-----------+-------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++-----------+-------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; CLOCK_27[0] ; 6.853 ; 6.853 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[1]  ; CLOCK_27[0] ; 6.832 ; 6.832 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[3]  ; CLOCK_27[0] ; 6.539 ; 6.539 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[5]  ; CLOCK_27[0] ; 6.853 ; 6.853 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[7]  ; CLOCK_27[0] ; 6.559 ; 6.559 ; Fall       ; CLOCK_27[0]     ;
+; VGA_B[*]  ; CLOCK_27[0] ; 8.937 ; 8.937 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[0] ; CLOCK_27[0] ; 8.590 ; 8.590 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[1] ; CLOCK_27[0] ; 8.494 ; 8.494 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[2] ; CLOCK_27[0] ; 8.057 ; 8.057 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[3] ; CLOCK_27[0] ; 8.937 ; 8.937 ; Fall       ; CLOCK_27[0]     ;
+; VGA_G[*]  ; CLOCK_27[0] ; 9.530 ; 9.530 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[0] ; CLOCK_27[0] ; 9.530 ; 9.530 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[1] ; CLOCK_27[0] ; 9.281 ; 9.281 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[2] ; CLOCK_27[0] ; 7.927 ; 7.927 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[3] ; CLOCK_27[0] ; 8.209 ; 8.209 ; Fall       ; CLOCK_27[0]     ;
+; VGA_R[*]  ; CLOCK_27[0] ; 8.775 ; 8.775 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[0] ; CLOCK_27[0] ; 8.755 ; 8.755 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[1] ; CLOCK_27[0] ; 8.215 ; 8.215 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[2] ; CLOCK_27[0] ; 8.774 ; 8.774 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[3] ; CLOCK_27[0] ; 8.775 ; 8.775 ; Fall       ; CLOCK_27[0]     ;
+; VGA_HS    ; VGA_HS~reg0 ; 3.814 ;       ; Rise       ; VGA_HS~reg0     ;
+; VGA_VS    ; VGA_HS~reg0 ; 8.188 ; 8.188 ; Rise       ; VGA_HS~reg0     ;
+; VGA_HS    ; VGA_HS~reg0 ;       ; 3.814 ; Fall       ; VGA_HS~reg0     ;
++-----------+-------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++-----------+-------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; CLOCK_27[0] ; 6.539 ; 6.539 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[1]  ; CLOCK_27[0] ; 6.832 ; 6.832 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[3]  ; CLOCK_27[0] ; 6.539 ; 6.539 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[5]  ; CLOCK_27[0] ; 6.853 ; 6.853 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[7]  ; CLOCK_27[0] ; 6.559 ; 6.559 ; Fall       ; CLOCK_27[0]     ;
+; VGA_B[*]  ; CLOCK_27[0] ; 8.057 ; 8.057 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[0] ; CLOCK_27[0] ; 8.590 ; 8.590 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[1] ; CLOCK_27[0] ; 8.494 ; 8.494 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[2] ; CLOCK_27[0] ; 8.057 ; 8.057 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[3] ; CLOCK_27[0] ; 8.937 ; 8.937 ; Fall       ; CLOCK_27[0]     ;
+; VGA_G[*]  ; CLOCK_27[0] ; 7.927 ; 7.927 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[0] ; CLOCK_27[0] ; 9.530 ; 9.530 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[1] ; CLOCK_27[0] ; 9.281 ; 9.281 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[2] ; CLOCK_27[0] ; 7.927 ; 7.927 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[3] ; CLOCK_27[0] ; 8.209 ; 8.209 ; Fall       ; CLOCK_27[0]     ;
+; VGA_R[*]  ; CLOCK_27[0] ; 8.215 ; 8.215 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[0] ; CLOCK_27[0] ; 8.755 ; 8.755 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[1] ; CLOCK_27[0] ; 8.215 ; 8.215 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[2] ; CLOCK_27[0] ; 8.774 ; 8.774 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[3] ; CLOCK_27[0] ; 8.775 ; 8.775 ; Fall       ; CLOCK_27[0]     ;
+; VGA_HS    ; VGA_HS~reg0 ; 3.814 ;       ; Rise       ; VGA_HS~reg0     ;
+; VGA_VS    ; VGA_HS~reg0 ; 8.188 ; 8.188 ; Rise       ; VGA_HS~reg0     ;
+; VGA_HS    ; VGA_HS~reg0 ;       ; 3.814 ; Fall       ; VGA_HS~reg0     ;
++-----------+-------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------+
+; Fast Model Setup Summary             ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; CLOCK_27[0] ; -3.627 ; -182.872      ;
+; VGA_HS~reg0 ; -0.094 ; -0.940        ;
++-------------+--------+---------------+
+
+
++-------------------------------------+
+; Fast Model Hold Summary             ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; CLOCK_27[0] ; 0.215 ; 0.000         ;
+; VGA_HS~reg0 ; 0.362 ; 0.000         ;
++-------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------------+--------+-----------------+
+; Clock       ; Slack  ; End Point TNS   ;
++-------------+--------+-----------------+
+; CLOCK_27[0] ; -1.380 ; -108.380        ;
+; VGA_HS~reg0 ; -0.500 ; -12.000         ;
++-------------+--------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_27[0]'                                                                          ;
++--------+-----------+---------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+---------------+--------------+-------------+--------------+------------+------------+
+; -3.627 ; drawHS[4] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 4.660      ;
+; -3.603 ; drawHS[1] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 4.636      ;
+; -3.587 ; drawHS[3] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 4.620      ;
+; -3.577 ; drawHS[1] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 4.604      ;
+; -3.553 ; drawHS[1] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 4.586      ;
+; -3.549 ; drawHS[2] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 4.582      ;
+; -3.544 ; drawHS[3] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 4.577      ;
+; -3.538 ; drawHS[0] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 4.572      ;
+; -3.526 ; drawHS[1] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.003     ; 4.555      ;
+; -3.518 ; drawHS[3] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 4.545      ;
+; -3.516 ; drawHS[1] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.013     ; 4.535      ;
+; -3.512 ; drawHS[0] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.004     ; 4.540      ;
+; -3.485 ; drawHS[0] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 4.519      ;
+; -3.482 ; drawHS[3] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.001     ; 4.513      ;
+; -3.475 ; drawHS[2] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 4.508      ;
+; -3.474 ; drawHS[6] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 4.500      ;
+; -3.467 ; drawHS[3] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.003     ; 4.496      ;
+; -3.461 ; drawHS[0] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.002     ; 4.491      ;
+; -3.457 ; drawHS[3] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.013     ; 4.476      ;
+; -3.452 ; drawHS[1] ; VGA_R[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.016     ; 4.468      ;
+; -3.451 ; drawHS[0] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.012     ; 4.471      ;
+; -3.451 ; drawHS[2] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 4.478      ;
+; -3.449 ; drawHS[2] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 4.476      ;
+; -3.439 ; drawHS[2] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.013     ; 4.458      ;
+; -3.439 ; drawHS[5] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 4.471      ;
+; -3.434 ; drawHS[3] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 4.461      ;
+; -3.430 ; drawHS[3] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.013     ; 4.449      ;
+; -3.423 ; drawHS[1] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 4.450      ;
+; -3.413 ; drawHS[5] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 4.439      ;
+; -3.409 ; drawHS[3] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.003      ; 4.444      ;
+; -3.408 ; drawHS[1] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.003      ; 4.443      ;
+; -3.405 ; drawHS[3] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.001     ; 4.436      ;
+; -3.403 ; drawHS[1] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.013     ; 4.422      ;
+; -3.402 ; drawHS[1] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.009     ; 4.425      ;
+; -3.400 ; drawHS[4] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.001     ; 4.431      ;
+; -3.398 ; drawHS[2] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.003     ; 4.427      ;
+; -3.394 ; drawHS[0] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.012     ; 4.414      ;
+; -3.394 ; drawHS[5] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.002     ; 4.424      ;
+; -3.393 ; drawHS[3] ; VGA_R[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.016     ; 4.409      ;
+; -3.392 ; drawHS[2] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.001     ; 4.423      ;
+; -3.388 ; drawHS[2] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.013     ; 4.407      ;
+; -3.387 ; drawHS[0] ; VGA_R[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.015     ; 4.404      ;
+; -3.385 ; drawHS[4] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 4.418      ;
+; -3.378 ; drawVS[0] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 4.412      ;
+; -3.376 ; drawHS[4] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 4.403      ;
+; -3.374 ; drawHS[4] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.009     ; 4.397      ;
+; -3.370 ; drawHS[5] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 4.402      ;
+; -3.370 ; drawHS[6] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 4.402      ;
+; -3.368 ; drawHS[0] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 4.400      ;
+; -3.368 ; drawVS[0] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.004      ; 4.404      ;
+; -3.362 ; drawHS[5] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.004     ; 4.390      ;
+; -3.360 ; drawHS[1] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.001     ; 4.391      ;
+; -3.359 ; drawHS[4] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 4.386      ;
+; -3.355 ; drawHS[2] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.003      ; 4.390      ;
+; -3.352 ; drawHS[5] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.014     ; 4.370      ;
+; -3.350 ; drawHS[3] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.009     ; 4.373      ;
+; -3.344 ; drawHS[6] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 4.370      ;
+; -3.343 ; drawHS[0] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.008     ; 4.367      ;
+; -3.335 ; drawHS[5] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 4.369      ;
+; -3.333 ; drawVS[1] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.004      ; 4.369      ;
+; -3.332 ; drawHS[5] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.006     ; 4.358      ;
+; -3.331 ; drawHS[2] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.001     ; 4.362      ;
+; -3.330 ; drawHS[0] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.004      ; 4.366      ;
+; -3.327 ; drawHS[0] ; VGA_G[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.004     ; 4.355      ;
+; -3.327 ; drawHS[4] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.013     ; 4.346      ;
+; -3.325 ; drawHS[4] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.001     ; 4.356      ;
+; -3.325 ; drawHS[1] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.001     ; 4.356      ;
+; -3.324 ; drawHS[2] ; VGA_R[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.016     ; 4.340      ;
+; -3.323 ; drawHS[4] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.003     ; 4.352      ;
+; -3.322 ; drawHS[6] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.010     ; 4.344      ;
+; -3.319 ; drawHS[4] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.003      ; 4.354      ;
+; -3.298 ; drawHS[4] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.013     ; 4.317      ;
+; -3.295 ; drawHS[0] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 4.327      ;
+; -3.294 ; drawVS[0] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.006      ; 4.332      ;
+; -3.293 ; drawHS[6] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.004     ; 4.321      ;
+; -3.288 ; drawHS[5] ; VGA_R[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.017     ; 4.303      ;
+; -3.283 ; drawHS[6] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.014     ; 4.301      ;
+; -3.275 ; drawHS[2] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.009     ; 4.298      ;
+; -3.272 ; drawHS[7] ; VGA_R[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.003      ; 4.307      ;
+; -3.264 ; drawHS[5] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.002     ; 4.294      ;
+; -3.264 ; drawHS[7] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.005      ; 4.301      ;
+; -3.262 ; drawHS[6] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 4.296      ;
+; -3.249 ; drawHS[7] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.005      ; 4.286      ;
+; -3.249 ; drawHS[6] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.014     ; 4.267      ;
+; -3.241 ; drawVS[0] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.002      ; 4.275      ;
+; -3.236 ; drawVS[0] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 4.268      ;
+; -3.234 ; drawHS[4] ; VGA_R[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.016     ; 4.250      ;
+; -3.227 ; drawHS[6] ; VGA_B[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.000      ; 4.259      ;
+; -3.223 ; drawHS[7] ; VGA_G[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.001     ; 4.254      ;
+; -3.222 ; drawVS[1] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.006      ; 4.260      ;
+; -3.219 ; drawHS[6] ; VGA_R[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.017     ; 4.234      ;
+; -3.211 ; drawHS[7] ; VGA_B[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.007      ; 4.250      ;
+; -3.203 ; drawHS[6] ; VGA_B[1]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.002     ; 4.233      ;
+; -3.198 ; drawHS[5] ; VGA_B[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.014     ; 4.216      ;
+; -3.194 ; drawHS[7] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.005     ; 4.221      ;
+; -3.181 ; drawVS[0] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.010     ; 4.203      ;
+; -3.180 ; drawVS[1] ; VGA_G[0]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.004      ; 4.216      ;
+; -3.172 ; drawHS[7] ; VGA_R[3]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; 0.001      ; 4.205      ;
+; -3.171 ; drawHS[5] ; VGA_G[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.010     ; 4.193      ;
+; -3.162 ; drawHS[7] ; VGA_R[2]~reg0 ; CLOCK_27[0]  ; CLOCK_27[0] ; 1.000        ; -0.009     ; 4.185      ;
++--------+-----------+---------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'VGA_HS~reg0'                                                                         ;
++--------+------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node  ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------+-------------+--------------+-------------+--------------+------------+------------+
+; -0.094 ; countVS[7] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.126      ;
+; -0.094 ; countVS[7] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.126      ;
+; -0.094 ; countVS[7] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.126      ;
+; -0.094 ; countVS[7] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.126      ;
+; -0.094 ; countVS[7] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.126      ;
+; -0.094 ; countVS[7] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.126      ;
+; -0.094 ; countVS[7] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.126      ;
+; -0.094 ; countVS[7] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.126      ;
+; -0.094 ; countVS[7] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.126      ;
+; -0.094 ; countVS[7] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.126      ;
+; -0.066 ; countVS[8] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.098      ;
+; -0.066 ; countVS[8] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.098      ;
+; -0.066 ; countVS[8] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.098      ;
+; -0.066 ; countVS[8] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.098      ;
+; -0.066 ; countVS[8] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.098      ;
+; -0.066 ; countVS[8] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.098      ;
+; -0.066 ; countVS[8] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.098      ;
+; -0.066 ; countVS[8] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.098      ;
+; -0.066 ; countVS[8] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.098      ;
+; -0.066 ; countVS[8] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.098      ;
+; -0.034 ; countVS[1] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.066      ;
+; -0.034 ; countVS[1] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.066      ;
+; -0.034 ; countVS[1] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.066      ;
+; -0.034 ; countVS[1] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.066      ;
+; -0.034 ; countVS[1] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.066      ;
+; -0.034 ; countVS[1] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.066      ;
+; -0.034 ; countVS[1] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.066      ;
+; -0.034 ; countVS[1] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.066      ;
+; -0.034 ; countVS[1] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.066      ;
+; -0.034 ; countVS[1] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.066      ;
+; -0.018 ; countVS[2] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; countVS[2] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; countVS[2] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; countVS[2] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; countVS[2] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; countVS[2] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; countVS[2] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; countVS[2] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; countVS[2] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; countVS[2] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.050      ;
+; -0.011 ; countVS[5] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.043      ;
+; -0.011 ; countVS[5] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.043      ;
+; -0.011 ; countVS[5] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.043      ;
+; -0.011 ; countVS[5] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.043      ;
+; -0.011 ; countVS[5] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.043      ;
+; -0.011 ; countVS[5] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.043      ;
+; -0.011 ; countVS[5] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.043      ;
+; -0.011 ; countVS[5] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.043      ;
+; -0.011 ; countVS[5] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.043      ;
+; -0.011 ; countVS[5] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.043      ;
+; 0.018  ; countVS[0] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 1.014      ;
+; 0.037  ; countVS[3] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.995      ;
+; 0.037  ; countVS[3] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.995      ;
+; 0.037  ; countVS[3] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.995      ;
+; 0.037  ; countVS[3] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.995      ;
+; 0.037  ; countVS[3] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.995      ;
+; 0.037  ; countVS[3] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.995      ;
+; 0.037  ; countVS[3] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.995      ;
+; 0.037  ; countVS[3] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.995      ;
+; 0.037  ; countVS[3] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.995      ;
+; 0.037  ; countVS[3] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.995      ;
+; 0.050  ; countVS[6] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.982      ;
+; 0.050  ; countVS[6] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.982      ;
+; 0.050  ; countVS[6] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.982      ;
+; 0.050  ; countVS[6] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.982      ;
+; 0.050  ; countVS[6] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.982      ;
+; 0.050  ; countVS[6] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.982      ;
+; 0.050  ; countVS[6] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.982      ;
+; 0.050  ; countVS[6] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.982      ;
+; 0.050  ; countVS[6] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.982      ;
+; 0.050  ; countVS[6] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.982      ;
+; 0.053  ; countVS[0] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.979      ;
+; 0.055  ; countVS[9] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.977      ;
+; 0.055  ; countVS[9] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.977      ;
+; 0.055  ; countVS[9] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.977      ;
+; 0.055  ; countVS[9] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.977      ;
+; 0.055  ; countVS[9] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.977      ;
+; 0.055  ; countVS[9] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.977      ;
+; 0.055  ; countVS[9] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.977      ;
+; 0.055  ; countVS[9] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.977      ;
+; 0.055  ; countVS[9] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.977      ;
+; 0.055  ; countVS[9] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.977      ;
+; 0.074  ; countVS[1] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 0.959      ;
+; 0.088  ; countVS[0] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.944      ;
+; 0.090  ; countVS[2] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 0.943      ;
+; 0.096  ; countVS[0] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.936      ;
+; 0.096  ; countVS[0] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.936      ;
+; 0.096  ; countVS[0] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.936      ;
+; 0.096  ; countVS[0] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.936      ;
+; 0.096  ; countVS[0] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.936      ;
+; 0.096  ; countVS[0] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.936      ;
+; 0.096  ; countVS[0] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.936      ;
+; 0.098  ; countVS[7] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 0.935      ;
+; 0.106  ; countVS[4] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 0.927      ;
+; 0.126  ; countVS[8] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 0.907      ;
+; 0.145  ; countVS[3] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.001      ; 0.888      ;
+; 0.150  ; countVS[4] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.882      ;
+; 0.150  ; countVS[4] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.882      ;
+; 0.150  ; countVS[4] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.882      ;
+; 0.150  ; countVS[4] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 1.000        ; 0.000      ; 0.882      ;
++--------+------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_27[0]'                                                                                 ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node       ; To Node        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; drawHS[7]       ; drawHS[7]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; drawHS[8]       ; drawHS[8]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; drawHS[9]       ; drawHS[9]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; drawVS[5]       ; drawVS[5]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; drawVS[6]       ; drawVS[6]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; drawVS[7]       ; drawVS[7]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; drawVS[8]       ; drawVS[8]      ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; pacmanFrame[0]  ; pacmanFrame[0] ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; pacmanFrame[1]  ; pacmanFrame[1] ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.245 ; xInit[9]        ; xInit[9]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.397      ;
+; 0.245 ; pacmanFrame[0]  ; pacmanFrame[1] ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.397      ;
+; 0.246 ; moveDelay[19]   ; moveDelay[19]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.398      ;
+; 0.255 ; countHS[9]      ; countHS[9]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.407      ;
+; 0.298 ; countHS[8]      ; VGA_HS~reg0    ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.450      ;
+; 0.356 ; xEnd[8]         ; xEnd[8]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.508      ;
+; 0.356 ; yEnd[2]         ; yEnd[2]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.508      ;
+; 0.358 ; moveDelay[1]    ; moveDelay[1]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; xEnd[3]         ; xEnd[3]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358 ; xEnd[6]         ; xEnd[6]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.510      ;
+; 0.360 ; countHS[0]      ; countHS[0]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; moveDelay[5]    ; moveDelay[5]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; moveDelay[3]    ; moveDelay[3]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; yEnd[4]         ; yEnd[4]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360 ; yEnd[8]         ; yEnd[8]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361 ; moveDelay[7]    ; moveDelay[7]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; moveDelay[8]    ; moveDelay[8]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; moveDelay[9]    ; moveDelay[9]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361 ; moveDelay[11]   ; moveDelay[11]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; xInit[0]        ; xInit[0]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; yEnd[6]         ; yEnd[6]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; yInit[0]        ; yInit[0]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.516      ;
+; 0.365 ; moveDelay[12]   ; moveDelay[12]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; moveDelay[14]   ; moveDelay[14]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.517      ;
+; 0.367 ; moveDelay[0]    ; moveDelay[0]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367 ; yEnd[1]         ; yEnd[1]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.519      ;
+; 0.368 ; countHS[1]      ; countHS[1]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; moveDelay[17]   ; moveDelay[17]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.520      ;
+; 0.369 ; countHS[2]      ; countHS[2]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; xEnd[7]         ; xEnd[7]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369 ; xEnd[9]         ; xEnd[9]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371 ; xEnd[2]         ; xEnd[2]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; countHS[4]      ; countHS[4]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; xEnd[4]         ; xEnd[4]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; xEnd[5]         ; xEnd[5]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.524      ;
+; 0.373 ; moveDelay[13]   ; moveDelay[13]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373 ; moveDelay[18]   ; moveDelay[18]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373 ; yEnd[5]         ; yEnd[5]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374 ; moveDelay[2]    ; moveDelay[2]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.526      ;
+; 0.375 ; countHS[8]      ; countHS[8]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; countHS[9]      ; VGA_HS~reg0    ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; moveDelay[16]   ; moveDelay[16]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; xInit[8]        ; xInit[8]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; moveDelay[4]    ; moveDelay[4]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; moveDelay[6]    ; moveDelay[6]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376 ; xInit[5]        ; xInit[5]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377 ; xInit[3]        ; xInit[3]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377 ; yInit[6]        ; yInit[6]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378 ; xInit[6]        ; xInit[6]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; yInit[8]        ; yInit[8]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.530      ;
+; 0.380 ; yInit[1]        ; yInit[1]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.532      ;
+; 0.380 ; yInit[3]        ; yInit[3]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.532      ;
+; 0.380 ; yInit[4]        ; yInit[4]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.532      ;
+; 0.382 ; countHS[3]      ; countHS[3]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.534      ;
+; 0.385 ; countHS[6]      ; countHS[6]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.537      ;
+; 0.386 ; countHS[5]      ; countHS[5]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.538      ;
+; 0.417 ; enableHS        ; showDisplay    ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.569      ;
+; 0.441 ; yEnd[7]         ; yEnd[7]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.593      ;
+; 0.443 ; yInit[5]        ; yInit[5]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.595      ;
+; 0.445 ; yEnd[3]         ; yEnd[3]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.597      ;
+; 0.449 ; xEnd[1]         ; xEnd[1]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.601      ;
+; 0.449 ; xInit[7]        ; xInit[7]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.601      ;
+; 0.450 ; moveDelay[15]   ; moveDelay[15]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.602      ;
+; 0.453 ; moveDelay[10]   ; moveDelay[10]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.605      ;
+; 0.453 ; xInit[4]        ; xInit[4]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.605      ;
+; 0.454 ; countHS[7]      ; countHS[7]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.606      ;
+; 0.457 ; countHS[7]      ; VGA_HS~reg0    ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.609      ;
+; 0.462 ; xInit[1]        ; xInit[1]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.614      ;
+; 0.462 ; yInit[2]        ; yInit[2]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.614      ;
+; 0.464 ; yInit[7]        ; yInit[7]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.616      ;
+; 0.465 ; xInit[2]        ; xInit[2]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.617      ;
+; 0.494 ; xEnd[8]         ; xEnd[9]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.646      ;
+; 0.496 ; xEnd[3]         ; xEnd[4]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.648      ;
+; 0.498 ; countHS[0]      ; countHS[1]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; yEnd[4]         ; yEnd[5]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; moveDelay[3]    ; moveDelay[4]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.650      ;
+; 0.498 ; moveDelay[5]    ; moveDelay[6]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.650      ;
+; 0.499 ; moveDelay[7]    ; moveDelay[8]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; moveDelay[8]    ; moveDelay[9]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499 ; moveDelay[11]   ; moveDelay[12]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500 ; xInit[0]        ; xInit[1]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.652      ;
+; 0.501 ; yEnd[6]         ; yEnd[7]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.653      ;
+; 0.502 ; yInit[0]        ; yInit[1]       ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.654      ;
+; 0.503 ; moveDelay[12]   ; moveDelay[13]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.655      ;
+; 0.503 ; moveDelay[14]   ; moveDelay[15]  ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.655      ;
+; 0.506 ; countHS[1]      ; countHS[2]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.658      ;
+; 0.507 ; countHS[2]      ; countHS[3]     ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.659      ;
+; 0.507 ; yEnd[1]         ; yEnd[2]        ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.659      ;
+; 0.507 ; moveDelay[0]    ; moveDelay[1]   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.659      ;
+; 0.509 ; startController ; LEDG[7]~reg0   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.661      ;
+; 0.509 ; startController ; LEDG[5]~reg0   ; CLOCK_27[0]  ; CLOCK_27[0] ; 0.000        ; 0.000      ; 0.661      ;
++-------+-----------------+----------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'VGA_HS~reg0'                                                                         ;
++-------+------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node  ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------+-------------+--------------+-------------+--------------+------------+------------+
+; 0.362 ; countVS[8] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.514      ;
+; 0.366 ; countVS[4] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; countVS[6] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.518      ;
+; 0.367 ; countVS[2] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.519      ;
+; 0.382 ; countVS[1] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.534      ;
+; 0.383 ; countVS[3] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.535      ;
+; 0.383 ; countVS[0] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.535      ;
+; 0.384 ; countVS[5] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.536      ;
+; 0.384 ; countVS[7] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.536      ;
+; 0.448 ; countVS[9] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.601      ;
+; 0.451 ; countVS[9] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.604      ;
+; 0.461 ; countVS[9] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.613      ;
+; 0.462 ; countVS[5] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.615      ;
+; 0.500 ; countVS[8] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.652      ;
+; 0.504 ; countVS[4] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.656      ;
+; 0.504 ; countVS[6] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.656      ;
+; 0.522 ; countVS[1] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.674      ;
+; 0.523 ; countVS[3] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.675      ;
+; 0.523 ; countVS[0] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.675      ;
+; 0.524 ; countVS[7] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.676      ;
+; 0.524 ; countVS[5] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.676      ;
+; 0.531 ; countVS[0] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.684      ;
+; 0.539 ; countVS[6] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.691      ;
+; 0.539 ; countVS[4] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.691      ;
+; 0.558 ; countVS[3] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.710      ;
+; 0.558 ; countVS[0] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.710      ;
+; 0.559 ; countVS[7] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.711      ;
+; 0.559 ; countVS[5] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.711      ;
+; 0.560 ; countVS[2] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.712      ;
+; 0.564 ; countVS[6] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.717      ;
+; 0.574 ; countVS[6] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.726      ;
+; 0.574 ; countVS[4] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.726      ;
+; 0.589 ; countVS[3] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.742      ;
+; 0.593 ; countVS[3] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.745      ;
+; 0.594 ; countVS[5] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.746      ;
+; 0.595 ; countVS[2] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.747      ;
+; 0.609 ; countVS[4] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.761      ;
+; 0.616 ; countVS[1] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.768      ;
+; 0.620 ; countVS[4] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.773      ;
+; 0.624 ; countVS[7] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.777      ;
+; 0.628 ; countVS[3] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.780      ;
+; 0.629 ; countVS[5] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.781      ;
+; 0.630 ; countVS[2] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.782      ;
+; 0.638 ; countVS[6] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.791      ;
+; 0.644 ; countVS[2] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.797      ;
+; 0.644 ; countVS[4] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.796      ;
+; 0.651 ; countVS[1] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.803      ;
+; 0.652 ; countVS[0] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.804      ;
+; 0.660 ; countVS[1] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.813      ;
+; 0.663 ; countVS[3] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.815      ;
+; 0.665 ; countVS[2] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.817      ;
+; 0.677 ; countVS[0] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.830      ;
+; 0.681 ; countVS[8] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.834      ;
+; 0.686 ; countVS[1] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.838      ;
+; 0.687 ; countVS[0] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.839      ;
+; 0.698 ; countVS[3] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.850      ;
+; 0.699 ; countVS[5] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.852      ;
+; 0.700 ; countVS[2] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.852      ;
+; 0.721 ; countVS[1] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.873      ;
+; 0.722 ; countVS[0] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.874      ;
+; 0.730 ; countVS[4] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.882      ;
+; 0.730 ; countVS[4] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.882      ;
+; 0.730 ; countVS[4] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.882      ;
+; 0.730 ; countVS[4] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.882      ;
+; 0.735 ; countVS[2] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.887      ;
+; 0.735 ; countVS[3] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.888      ;
+; 0.754 ; countVS[8] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.907      ;
+; 0.756 ; countVS[1] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.908      ;
+; 0.757 ; countVS[0] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.909      ;
+; 0.770 ; countVS[2] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.922      ;
+; 0.774 ; countVS[4] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.927      ;
+; 0.782 ; countVS[7] ; VGA_VS~reg0 ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.935      ;
+; 0.784 ; countVS[0] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.936      ;
+; 0.784 ; countVS[0] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.936      ;
+; 0.784 ; countVS[0] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.936      ;
+; 0.790 ; countVS[2] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.943      ;
+; 0.791 ; countVS[1] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.943      ;
+; 0.806 ; countVS[1] ; enableVS    ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.001      ; 0.959      ;
+; 0.825 ; countVS[9] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.977      ;
+; 0.825 ; countVS[9] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.977      ;
+; 0.825 ; countVS[9] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.977      ;
+; 0.825 ; countVS[9] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.977      ;
+; 0.825 ; countVS[9] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.977      ;
+; 0.825 ; countVS[9] ; countVS[6]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.977      ;
+; 0.825 ; countVS[9] ; countVS[7]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.977      ;
+; 0.825 ; countVS[9] ; countVS[8]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.977      ;
+; 0.825 ; countVS[9] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.977      ;
+; 0.826 ; countVS[1] ; countVS[9]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.978      ;
+; 0.830 ; countVS[6] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.982      ;
+; 0.830 ; countVS[6] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.982      ;
+; 0.830 ; countVS[6] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.982      ;
+; 0.830 ; countVS[6] ; countVS[4]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.982      ;
+; 0.830 ; countVS[6] ; countVS[5]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.982      ;
+; 0.830 ; countVS[6] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.982      ;
+; 0.843 ; countVS[3] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.995      ;
+; 0.843 ; countVS[3] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.995      ;
+; 0.843 ; countVS[3] ; countVS[0]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 0.995      ;
+; 0.891 ; countVS[5] ; countVS[1]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.043      ;
+; 0.891 ; countVS[5] ; countVS[2]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.043      ;
+; 0.891 ; countVS[5] ; countVS[3]  ; VGA_HS~reg0  ; VGA_HS~reg0 ; 0.000        ; 0.000      ; 1.043      ;
++-------+------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_27[0]'                                                        ;
++--------+--------------+----------------+------------------+-------------+------------+---------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target        ;
++--------+--------------+----------------+------------------+-------------+------------+---------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_27[0] ; Rise       ; CLOCK_27[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; LEDG[1]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; LEDG[1]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; LEDG[3]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; LEDG[3]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; LEDG[5]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; LEDG[5]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; LEDG[7]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; LEDG[7]~reg0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_B[0]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_B[0]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_B[1]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_B[1]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_B[2]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_B[2]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_B[3]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_B[3]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_G[0]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_G[0]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_G[1]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_G[1]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_G[2]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_G[2]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_G[3]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_G[3]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; VGA_HS~reg0   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; VGA_HS~reg0   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_R[0]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_R[0]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_R[1]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_R[1]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_R[2]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_R[2]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; VGA_R[3]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; VGA_R[3]~reg0 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; countHS[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; countHS[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawHS[9]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawHS[9]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; drawVS[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; drawVS[8]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Rise       ; enableHS      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Rise       ; enableHS      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; moveDelay[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; moveDelay[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; moveDelay[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_27[0] ; Fall       ; moveDelay[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_27[0] ; Fall       ; moveDelay[11] ;
++--------+--------------+----------------+------------------+-------------+------------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'VGA_HS~reg0'                                                                      ;
++--------+--------------+----------------+------------------+-------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock       ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+-------------+------------+-----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; VGA_VS~reg0                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; VGA_VS~reg0                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[0]                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[0]                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[1]                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[1]                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[2]                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[2]                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[3]                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[3]                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[4]                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[4]                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[5]                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[5]                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[6]                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[6]                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[7]                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[7]                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[8]                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[8]                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[9]                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[9]                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; enableVS                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; enableVS                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; VGA_HS~reg0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; VGA_HS~reg0clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; VGA_HS~reg0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; VGA_HS~reg0clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; VGA_HS~reg0|regout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; VGA_HS~reg0|regout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; VGA_VS~reg0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; VGA_VS~reg0|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[5]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[5]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[6]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[6]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[7]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[7]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[8]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[8]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; countVS[9]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; countVS[9]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; VGA_HS~reg0 ; Rise       ; enableVS|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; VGA_HS~reg0 ; Rise       ; enableVS|clk                ;
++--------+--------------+----------------+------------------+-------------+------------+-----------------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++-----------+-------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-------------+-------+-------+------------+-----------------+
+; KEY[*]    ; CLOCK_27[0] ; 4.741 ; 4.741 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[0]   ; CLOCK_27[0] ; 4.741 ; 4.741 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[1]   ; CLOCK_27[0] ; 4.480 ; 4.480 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[2]   ; CLOCK_27[0] ; 4.420 ; 4.420 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[3]   ; CLOCK_27[0] ; 4.072 ; 4.072 ; Fall       ; CLOCK_27[0]     ;
++-----------+-------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++-----------+-------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_27[0] ; -1.544 ; -1.544 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[0]   ; CLOCK_27[0] ; -1.572 ; -1.572 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[1]   ; CLOCK_27[0] ; -1.544 ; -1.544 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[2]   ; CLOCK_27[0] ; -1.576 ; -1.576 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[3]   ; CLOCK_27[0] ; -1.581 ; -1.581 ; Fall       ; CLOCK_27[0]     ;
++-----------+-------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++-----------+-------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; CLOCK_27[0] ; 3.703 ; 3.703 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[1]  ; CLOCK_27[0] ; 3.683 ; 3.683 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[3]  ; CLOCK_27[0] ; 3.583 ; 3.583 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[5]  ; CLOCK_27[0] ; 3.703 ; 3.703 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[7]  ; CLOCK_27[0] ; 3.603 ; 3.603 ; Fall       ; CLOCK_27[0]     ;
+; VGA_B[*]  ; CLOCK_27[0] ; 4.585 ; 4.585 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[0] ; CLOCK_27[0] ; 4.471 ; 4.471 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[1] ; CLOCK_27[0] ; 4.388 ; 4.388 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[2] ; CLOCK_27[0] ; 4.272 ; 4.272 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[3] ; CLOCK_27[0] ; 4.585 ; 4.585 ; Fall       ; CLOCK_27[0]     ;
+; VGA_G[*]  ; CLOCK_27[0] ; 4.836 ; 4.836 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[0] ; CLOCK_27[0] ; 4.836 ; 4.836 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[1] ; CLOCK_27[0] ; 4.735 ; 4.735 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[2] ; CLOCK_27[0] ; 4.183 ; 4.183 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[3] ; CLOCK_27[0] ; 4.290 ; 4.290 ; Fall       ; CLOCK_27[0]     ;
+; VGA_R[*]  ; CLOCK_27[0] ; 4.560 ; 4.560 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[0] ; CLOCK_27[0] ; 4.496 ; 4.496 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[1] ; CLOCK_27[0] ; 4.298 ; 4.298 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[2] ; CLOCK_27[0] ; 4.560 ; 4.560 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[3] ; CLOCK_27[0] ; 4.496 ; 4.496 ; Fall       ; CLOCK_27[0]     ;
+; VGA_HS    ; VGA_HS~reg0 ; 1.874 ;       ; Rise       ; VGA_HS~reg0     ;
+; VGA_VS    ; VGA_HS~reg0 ; 4.179 ; 4.179 ; Rise       ; VGA_HS~reg0     ;
+; VGA_HS    ; VGA_HS~reg0 ;       ; 1.874 ; Fall       ; VGA_HS~reg0     ;
++-----------+-------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++-----------+-------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; CLOCK_27[0] ; 3.583 ; 3.583 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[1]  ; CLOCK_27[0] ; 3.683 ; 3.683 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[3]  ; CLOCK_27[0] ; 3.583 ; 3.583 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[5]  ; CLOCK_27[0] ; 3.703 ; 3.703 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[7]  ; CLOCK_27[0] ; 3.603 ; 3.603 ; Fall       ; CLOCK_27[0]     ;
+; VGA_B[*]  ; CLOCK_27[0] ; 4.272 ; 4.272 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[0] ; CLOCK_27[0] ; 4.471 ; 4.471 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[1] ; CLOCK_27[0] ; 4.388 ; 4.388 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[2] ; CLOCK_27[0] ; 4.272 ; 4.272 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[3] ; CLOCK_27[0] ; 4.585 ; 4.585 ; Fall       ; CLOCK_27[0]     ;
+; VGA_G[*]  ; CLOCK_27[0] ; 4.183 ; 4.183 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[0] ; CLOCK_27[0] ; 4.836 ; 4.836 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[1] ; CLOCK_27[0] ; 4.735 ; 4.735 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[2] ; CLOCK_27[0] ; 4.183 ; 4.183 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[3] ; CLOCK_27[0] ; 4.290 ; 4.290 ; Fall       ; CLOCK_27[0]     ;
+; VGA_R[*]  ; CLOCK_27[0] ; 4.298 ; 4.298 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[0] ; CLOCK_27[0] ; 4.496 ; 4.496 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[1] ; CLOCK_27[0] ; 4.298 ; 4.298 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[2] ; CLOCK_27[0] ; 4.560 ; 4.560 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[3] ; CLOCK_27[0] ; 4.496 ; 4.496 ; Fall       ; CLOCK_27[0]     ;
+; VGA_HS    ; VGA_HS~reg0 ; 1.874 ;       ; Rise       ; VGA_HS~reg0     ;
+; VGA_VS    ; VGA_HS~reg0 ; 4.179 ; 4.179 ; Rise       ; VGA_HS~reg0     ;
+; VGA_HS    ; VGA_HS~reg0 ;       ; 1.874 ; Fall       ; VGA_HS~reg0     ;
++-----------+-------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -10.750  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  CLOCK_27[0]     ; -10.750  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  VGA_HS~reg0     ; -1.602   ; 0.362 ; N/A      ; N/A     ; -0.611              ;
+; Design-wide TNS  ; -640.567 ; 0.0   ; 0.0      ; 0.0     ; -147.049            ;
+;  CLOCK_27[0]     ; -621.761 ; 0.000 ; N/A      ; N/A     ; -132.385            ;
+;  VGA_HS~reg0     ; -18.806  ; 0.000 ; N/A      ; N/A     ; -14.664             ;
++------------------+----------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++-----------+-------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_27[0] ; 11.014 ; 11.014 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[0]   ; CLOCK_27[0] ; 11.014 ; 11.014 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[1]   ; CLOCK_27[0] ; 10.334 ; 10.334 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[2]   ; CLOCK_27[0] ; 10.196 ; 10.196 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[3]   ; CLOCK_27[0] ; 9.317  ; 9.317  ; Fall       ; CLOCK_27[0]     ;
++-----------+-------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++-----------+-------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+-------------+--------+--------+------------+-----------------+
+; KEY[*]    ; CLOCK_27[0] ; -1.544 ; -1.544 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[0]   ; CLOCK_27[0] ; -1.572 ; -1.572 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[1]   ; CLOCK_27[0] ; -1.544 ; -1.544 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[2]   ; CLOCK_27[0] ; -1.576 ; -1.576 ; Fall       ; CLOCK_27[0]     ;
+;  KEY[3]   ; CLOCK_27[0] ; -1.581 ; -1.581 ; Fall       ; CLOCK_27[0]     ;
++-----------+-------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Clock to Output Times                                                  ;
++-----------+-------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; CLOCK_27[0] ; 6.853 ; 6.853 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[1]  ; CLOCK_27[0] ; 6.832 ; 6.832 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[3]  ; CLOCK_27[0] ; 6.539 ; 6.539 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[5]  ; CLOCK_27[0] ; 6.853 ; 6.853 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[7]  ; CLOCK_27[0] ; 6.559 ; 6.559 ; Fall       ; CLOCK_27[0]     ;
+; VGA_B[*]  ; CLOCK_27[0] ; 8.937 ; 8.937 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[0] ; CLOCK_27[0] ; 8.590 ; 8.590 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[1] ; CLOCK_27[0] ; 8.494 ; 8.494 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[2] ; CLOCK_27[0] ; 8.057 ; 8.057 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[3] ; CLOCK_27[0] ; 8.937 ; 8.937 ; Fall       ; CLOCK_27[0]     ;
+; VGA_G[*]  ; CLOCK_27[0] ; 9.530 ; 9.530 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[0] ; CLOCK_27[0] ; 9.530 ; 9.530 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[1] ; CLOCK_27[0] ; 9.281 ; 9.281 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[2] ; CLOCK_27[0] ; 7.927 ; 7.927 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[3] ; CLOCK_27[0] ; 8.209 ; 8.209 ; Fall       ; CLOCK_27[0]     ;
+; VGA_R[*]  ; CLOCK_27[0] ; 8.775 ; 8.775 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[0] ; CLOCK_27[0] ; 8.755 ; 8.755 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[1] ; CLOCK_27[0] ; 8.215 ; 8.215 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[2] ; CLOCK_27[0] ; 8.774 ; 8.774 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[3] ; CLOCK_27[0] ; 8.775 ; 8.775 ; Fall       ; CLOCK_27[0]     ;
+; VGA_HS    ; VGA_HS~reg0 ; 3.814 ;       ; Rise       ; VGA_HS~reg0     ;
+; VGA_VS    ; VGA_HS~reg0 ; 8.188 ; 8.188 ; Rise       ; VGA_HS~reg0     ;
+; VGA_HS    ; VGA_HS~reg0 ;       ; 3.814 ; Fall       ; VGA_HS~reg0     ;
++-----------+-------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                          ;
++-----------+-------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port  ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+-------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; CLOCK_27[0] ; 3.583 ; 3.583 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[1]  ; CLOCK_27[0] ; 3.683 ; 3.683 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[3]  ; CLOCK_27[0] ; 3.583 ; 3.583 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[5]  ; CLOCK_27[0] ; 3.703 ; 3.703 ; Fall       ; CLOCK_27[0]     ;
+;  LEDG[7]  ; CLOCK_27[0] ; 3.603 ; 3.603 ; Fall       ; CLOCK_27[0]     ;
+; VGA_B[*]  ; CLOCK_27[0] ; 4.272 ; 4.272 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[0] ; CLOCK_27[0] ; 4.471 ; 4.471 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[1] ; CLOCK_27[0] ; 4.388 ; 4.388 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[2] ; CLOCK_27[0] ; 4.272 ; 4.272 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_B[3] ; CLOCK_27[0] ; 4.585 ; 4.585 ; Fall       ; CLOCK_27[0]     ;
+; VGA_G[*]  ; CLOCK_27[0] ; 4.183 ; 4.183 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[0] ; CLOCK_27[0] ; 4.836 ; 4.836 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[1] ; CLOCK_27[0] ; 4.735 ; 4.735 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[2] ; CLOCK_27[0] ; 4.183 ; 4.183 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_G[3] ; CLOCK_27[0] ; 4.290 ; 4.290 ; Fall       ; CLOCK_27[0]     ;
+; VGA_R[*]  ; CLOCK_27[0] ; 4.298 ; 4.298 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[0] ; CLOCK_27[0] ; 4.496 ; 4.496 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[1] ; CLOCK_27[0] ; 4.298 ; 4.298 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[2] ; CLOCK_27[0] ; 4.560 ; 4.560 ; Fall       ; CLOCK_27[0]     ;
+;  VGA_R[3] ; CLOCK_27[0] ; 4.496 ; 4.496 ; Fall       ; CLOCK_27[0]     ;
+; VGA_HS    ; VGA_HS~reg0 ; 1.874 ;       ; Rise       ; VGA_HS~reg0     ;
+; VGA_VS    ; VGA_HS~reg0 ; 4.179 ; 4.179 ; Rise       ; VGA_HS~reg0     ;
+; VGA_HS    ; VGA_HS~reg0 ;       ; 1.874 ; Fall       ; VGA_HS~reg0     ;
++-----------+-------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; CLOCK_27[0] ; CLOCK_27[0] ; 176      ; 0        ; 53       ; 52718    ;
+; VGA_HS~reg0 ; CLOCK_27[0] ; 1        ; 0        ; 9        ; 0        ;
+; VGA_HS~reg0 ; VGA_HS~reg0 ; 175      ; 0        ; 0        ; 0        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; CLOCK_27[0] ; CLOCK_27[0] ; 176      ; 0        ; 53       ; 52718    ;
+; VGA_HS~reg0 ; CLOCK_27[0] ; 1        ; 0        ; 9        ; 0        ;
+; VGA_HS~reg0 ; VGA_HS~reg0 ; 175      ; 0        ; 0        ; 0        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 164   ; 164  ;
+; Unconstrained Output Ports      ; 18    ; 18   ;
+; Unconstrained Output Port Paths ; 18    ; 18   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Thu Jun 01 21:23:19 2017
+Info: Command: quartus_sta Projeto_Base -c Projeto_Base
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Projeto_Base.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK_27[0] CLOCK_27[0]
+    Info (332105): create_clock -period 1.000 -name VGA_HS~reg0 VGA_HS~reg0
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -10.750
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):   -10.750      -621.761 CLOCK_27[0] 
+    Info (332119):    -1.602       -18.806 VGA_HS~reg0 
+Info (332146): Worst-case hold slack is 0.445
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.445         0.000 CLOCK_27[0] 
+    Info (332119):     0.975         0.000 VGA_HS~reg0 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.631
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.631      -132.385 CLOCK_27[0] 
+    Info (332119):    -0.611       -14.664 VGA_HS~reg0 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.627
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.627      -182.872 CLOCK_27[0] 
+    Info (332119):    -0.094        -0.940 VGA_HS~reg0 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLOCK_27[0] 
+    Info (332119):     0.362         0.000 VGA_HS~reg0 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380      -108.380 CLOCK_27[0] 
+    Info (332119):    -0.500       -12.000 VGA_HS~reg0 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 375 megabytes
+    Info: Processing ended: Thu Jun 01 21:23:29 2017
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:04
+
+

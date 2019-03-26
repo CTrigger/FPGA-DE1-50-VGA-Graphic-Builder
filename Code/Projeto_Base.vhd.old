@@ -1,0 +1,309 @@
+ENTITY Projeto_Base IS
+	PORT
+	(
+		-- INDICANDO QUE SERA USADO O CLOCK DE 27 MHZ
+		CLOCK_27 : IN bit_vector (0 to 1);
+		CLOCK_50 : IN bit;
+		
+		-- PINOS DE SAIDA DO SINCRONISMO
+		VGA_VS, VGA_HS : BUFFER BIT;
+		
+		-- Controles de cor
+		VGA_R: BUFFER bit_vector (0 to 3);
+		VGA_G: BUFFER bit_vector (0 to 3);
+		VGA_B: BUFFER bit_vector (0 to 3);
+		
+		-- leds confirmacao visual
+		LEDG: BUFFER bit_vector (0 to 7);
+		
+		-- botoes de movimento
+		KEY: IN bit_vector (0 to 3)
+		
+	);
+END Projeto_Base;
+ 
+ARCHITECTURE Kim OF Projeto_Base IS
+
+	-- controle de clock do video (compensar 27 MHz)
+	SIGNAL countHS: integer RANGE 0 TO 809;
+	SIGNAL countVS: integer RANGE 0 TO 525;
+
+	-- controle de sinal
+	SIGNAL enableHS: bit;
+	SIGNAL enableVS: bit;
+	
+	-- Controle do display
+	SIGNAL drawHS: integer RANGE 0 TO 640 := 0;
+	SIGNAL drawVS: integer RANGE 0 TO 480 := 0;
+	
+	SIGNAL showColor: bit;
+	SIGNAL hideColor: bit;
+	SIGNAL showDisplay: boolean;
+	
+	-- Controle do desenho
+	SIGNAL startController: bit;
+	SIGNAL xInit, xEnd: integer RANGE 0 TO 640;
+	SIGNAL yInit, yEnd: integer RANGE 0 TO 480;
+	SIGNAL quadrado: boolean;
+	
+	-- Controle de Direcao
+	CONSTANT cima: integer := 0;
+	CONSTANT baixo: integer := 1;
+	CONSTANT esquerda: integer := 2;
+	CONSTANT direita: integer := 3;
+	CONSTANT tempo: integer := 700000;
+	SIGNAL moveDelay: integer RANGE 0 TO tempo;
+	
+	
+	
+	BEGIN	
+		
+	-- Processo de controle do HSync
+	PROCESS(CLOCK_27(0))
+		BEGIN
+		IF(CLOCK_27(0)'EVENT and CLOCK_27(0) = '1') THEN
+			-- ========================================
+			--   parte do controle externo das imagens
+			-- ========================================
+			showDisplay <= (enableHS and enableVS) ='1';
+			showColor <= '1'; --(enableHS and enableVS);
+			hideColor <= '0';
+			
+			-- ========================================
+			--   parte do controle do desenho
+			-- ========================================
+			quadrado <= (xInit <= drawHS and drawHS < xEnd and yInit <= drawVS and drawVS < yEnd);
+					
+			-- constrole de contagem
+			IF (countHS < 809) THEN
+				countHS <= countHS + 1;
+			ELSE
+				countHS <= 0;
+			END IF;
+			
+			-- controle do Sincronismo
+			IF (0 <= countHS and countHS <= 102) THEN
+				VGA_HS <= '0';
+			ELSE
+				VGA_HS <= '1';
+			END IF;
+		
+			-- controle do enable do HSync : 640 px (793 - 153 = 640)
+			IF ( 153 <= countHS and countHS < 793 ) THEN
+				enableHS <= '1';
+			ELSE
+				-- testar consistencia do startdraw
+				-- drawHS <= 0;
+				enableHS <= '0';
+			END IF;
+
+		END IF;
+	END PROCESS;
+
+	
+	
+	-- Processo de controle do hSinc
+	PROCESS (VGA_HS)
+		BEGIN
+		IF (VGA_HS'EVENT and  VGA_HS = '1') THEN
+			-- constrole de contagem
+			IF (countVS < 525) THEN
+				countVS <= countVS + 1;
+			ELSE
+				countVS <= 0;
+			END IF;
+			
+			-- controle do Sincronismo
+			IF (0 <= countVS and countVS <= 2) THEN
+				VGA_VS <= '0';
+			ELSE
+				VGA_VS <= '1';
+			END IF;
+		
+			-- controle do enable do HSync : 480 px (515-35 = 480)
+			IF ( 35 <= countVS and countVS < 515 ) THEN
+				enableVS <= '1';
+			ELSE
+				-- testar consistencia do start draw
+				-- drawVS <= 0;
+				enableVS <= '0';
+			END IF;	
+		
+		END IF;
+			
+	END PROCESS;
+	
+	-- processo de desenhar o quadrado
+	PROCESS (CLOCK_27(0))
+	-- PROCESS (CLOCK_50)
+		BEGIN
+		-- obs
+		-- showColor corresponte a operacao AND enableVS e enableHS avaliando bits quando estiverem ativos
+		-- showDisplay corresponde operacao AND enableVS e enableHS em boleano
+		IF (CLOCK_27(0)'EVENT and CLOCK_27(0) = '0') THEN
+
+			IF(enableHS = '0') THEN
+				drawHS <= 0;
+				
+			END IF;
+			
+			IF(enableVS = '0') THEN
+				drawVS <= 0;
+			END IF;
+			
+			
+			IF (showDisplay) THEN
+				IF (drawHS < 639) THEN
+					drawHS <= drawHS + 1;
+				ELSE
+					IF (drawVS < 480) THEN
+						drawVS <= drawVS + 1;
+					ELSE
+						-- drawVS <= 0;
+					END IF;
+					-- drawHS <= 0;
+				END IF;
+		
+				-- teste do quadrado no centro da tela
+				-- IF ( (315 <= drawHS AND drawHS < 325) and (235 <= drawVS and drawVS < 245)) THEN
+					-- VGA_R <= ('1', '1', '1', '1');
+					-- VGA_B <= ('0', '0', '0', '0');
+				-- ELSE
+					-- VGA_B <= ('1', '1', '1', '1');
+					-- VGA_R <= ('0', '0', '0', '0');
+				-- END IF;
+				
+				-- -- view do desenho
+				-- (eixo x and eixo y)
+				IF ((xInit <= drawHS AND drawHS < xEnd) and (yInit <= drawVS and drawVS < yEnd)) THEN
+					VGA_R(3) <= '1';
+					VGA_R(2) <= '1';
+					VGA_R(1) <= '1';
+					VGA_R(0) <= '1';
+					
+					VGA_B(3) <= '0';
+					VGA_B(2) <= '0';
+					VGA_B(1) <= '0';
+					VGA_B(0) <= '0';
+					
+				ELSE
+					VGA_R(3) <= '0';
+					VGA_R(2) <= '0';
+					VGA_R(1) <= '0';
+					VGA_R(0) <= '0';
+					
+					VGA_B(3) <= '1';
+					VGA_B(2) <= '1';
+					VGA_B(1) <= '1';
+					VGA_B(0) <= '1';
+					
+				END IF;
+				
+			ELSE
+			
+			-- eh obrigatorio manter o nivel logico em 0 quando nao for autorizado o desenho
+			-- caso constrario nao eh projetado no display
+				VGA_R(3) <= '0';
+				VGA_R(2) <= '0';
+				VGA_R(1) <= '0';
+				VGA_R(0) <= '0';
+				
+				VGA_G(3) <= '0';
+				VGA_G(2) <= '0';
+				VGA_G(1) <= '0';
+				VGA_G(0) <= '0';
+				
+				VGA_B(3) <= '0';
+				VGA_B(2) <= '0';
+				VGA_B(1) <= '0';
+				VGA_B(0) <= '0';
+				
+				 
+			END IF;
+	
+		END IF;
+	
+	END PROCESS;
+	
+	-- controle do processo de movimento
+	PROCESS (CLOCK_27(0))
+		BEGIN
+		IF(CLOCK_27(0)'EVENT and CLOCK_27(0) = '0') THEN
+			IF (not startController = '1') THEN
+				startController <= '1';
+				
+				xInit <= 315;
+				xEnd <= 325;
+				
+				yInit <= 235;
+				yEnd <= 245;
+				
+				moveDelay <= 0;
+			ELSE
+				IF ((KEY(3) OR KEY(2) OR KEY(1) OR KEY(0)) = '1' )THEN 
+					IF (moveDelay < tempo) THEN
+						moveDelay <= moveDelay + 1;
+					ELSE
+						moveDelay <= 0;
+					END IF;
+				END IF;
+				
+				-- cima
+				IF (KEY(3) = '0') THEN
+					IF (yInit >= 0 and moveDelay = tempo) THEN
+						yInit <= yInit - 1;
+						yEnd <= yEnd - 1;
+					END IF;
+					LEDG(5) <= '1';
+				ELSE
+					LEDG(5) <= '0';
+				END IF;	
+			
+				-- baixo
+				IF(KEY(2) = '0') THEN
+					IF (yEnd < 480 and moveDelay = tempo) THEN
+						yInit <= yInit + 1;
+						yEnd <= yEnd + 1;
+					END IF;
+					LEDG(7) <= '1';
+				ELSE
+					LEDG(7) <= '0';
+				END IF;
+
+				
+				-- esquerda
+				IF (KEY(1) = '0') THEN
+					IF (xInit >= 0 and moveDelay = tempo) THEN
+						xInit <= xInit - 1;
+						xEnd <= xEnd - 1;
+					END IF;
+					LEDG(3) <= '1';
+				ELSE
+					LEDG(3) <= '0';
+				END IF;	
+				
+				-- direita
+				IF (KEY(0) = '0') THEN
+					IF (xEnd < 640 and moveDelay = tempo) then
+						xInit <= xInit + 1;
+						xEnd <= xEnd + 1;
+					END IF;
+					LEDG(1) <= '1';
+				ELSE
+					LEDG(1) <= '0';
+				END IF;
+				
+			END IF;
+		
+		END IF;
+	
+	END PROCESS;
+	-- -- PROCESSO DE ANALISE BOOL
+	-- PROCESS (CLOCK_50)
+	-- BEGIN
+		-- IF(CLOCK_50'EVENT and CLOCK_50 = '0') THEN
+	
+		-- END IF;
+	-- END PROCESS;
+	
+END Kim;
